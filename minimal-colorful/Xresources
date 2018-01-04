@@ -1,0 +1,64 @@
+! special
+*.foreground:   #c5c8c5
+*.background:   #1d1f31
+*.cursorColor:  #c5c8c5
+
+! black
+*.color0:       #292a2e
+*.color8:       #373b43
+
+! red
+*.color1:       #a54243
+*.color9:       #cc6666
+
+! green
+*.color2:       #8c9443
+*.color10:      #b5bd68
+
+! yellow
+*.color3:       #dc935f
+*.color11:      #f0c674
+
+! blue
+*.color4:       #5f819d
+*.color12:      #81a2be
+
+! magenta
+*.color5:       #85678f
+*.color13:      #b294bc
+
+! cyan
+*.color6:       #5e8d87
+*.color14:      #8abeb7
+
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6
+
+! ---- Font
+Xft.autohint	: true
+Xft.antialias	: true
+Xft.hinting	: true
+*font		: xft:Fira\ Code:style=Light:size=10
+
+! ---- URxvt
+
+URxvt.boldFont	: xft:Fira\ Code:style=Light:size=10
+URxvt.letterSpace : 1
+URxvt.scrollBar	: false
+URxvt.titleBar	: false
+URxvt.internalBorder	: 16
+URxvt.geometry	: 80x25
+
+! ---- Rofi
+
+rofi.hide-scrollbar : true
+rofi.width	: 16
+rofi.padding	: 12
+rofi.lines	: 5
+rofi.separator-style	: none
+rofi.font	: firacode light 10
+rofi.color-window	: #1d1f31, #707880, #c5c8c5
+rofi.color-normal	: #1d1f31, #5f819d, #1d1f31, #5f819d, #1d1f31
+rofi.color-active	: #1d1f31, #5f819d, #1d1f31, #5f819d, #1d1f31
+

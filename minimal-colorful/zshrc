@@ -1,0 +1,26 @@
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -e
+zstyle :compinstall filename '~/.zshrc'
+
+autoload -Uz compinit
+compinit
+
+prompt off
+
+function get_p() {
+case $((RANDOM%8)) in
+	4) PROMPT="%B%F{red}> %f%b"; RPROMPT="[%B%F{red}%~%f%b]";;
+	5) PROMPT="%B%F{magenta}> %f%b"; RPROMPT="[%B%F{magenta}%~%f%b]";;
+	6) PROMPT="%B%F{blue}> %f%b"; RPROMPT="[%B%F{blue}%~%f%b]";;
+	7) PROMPT="%B%F{yellow}> %f%b"; RPROMPT="[%B%F{yellow}%~%f%b]";;
+	1) PROMPT="%F{red}> %f"; RPROMPT="[%F{red}%~%f]";;
+	2) PROMPT="%F{magenta}> %f"; RPROMPT="[%F{magenta}%~%f]";;
+	3) PROMPT="%F{blue}> %f"; RPROMPT="[%F{blue}%~%f]";;
+	0) PROMPT="%F{yellow}> %f"; RPROMPT="[%F{yellow}%~%f]";;
+esac
+}
+
+add-zsh-hook precmd get_p
+
