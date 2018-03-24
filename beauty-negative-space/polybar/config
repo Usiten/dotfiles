@@ -1,0 +1,132 @@
+[colors]
+fg		= #e1e1e1
+bg		= #0d0d0d
+bl		= #4e9fb1
+rd		= #d23d3d
+gr		= #a0cf5d
+
+[bar/top]
+line-size	= 2
+font-0		= ypn envypn:style=Regular:size=15;2
+font-1		= wuncon-siji:size=11;3
+width		= 1888
+height		= 32
+offset-x	= 16
+offset-y	= 16
+override-redirect 	= false
+background	= ${colors.bg}
+foreground	= ${colors.fg}
+
+modules-right = timet pwr
+modules-left = bspwm
+modules-center = mpd
+
+[module/timet]
+type		= internal/date
+interval	= 1
+date		= "%d/%m, %H:%M:%S  "
+
+[module/bspwm]
+type	= internal/bspwm
+
+label-focused = %index%
+label-focused-background = ${colors.fg}
+label-focused-foreground = ${colors.bg}
+label-focused-padding = 2
+
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+label-empty	= %index%
+label-empty-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+label-occupied-foreground = ${colors.gr}
+label-occupied-underline = ${colors.gr}
+
+[module/mpd]
+type	= internal/mpd
+host	= 127.0.0.1
+port	= 6600
+
+interval = 1
+
+format-online = <icon-prev> <label-song> <icon-next> <label-time>
+label-song = %title%
+label-song-foreground = ${colors.gr}
+icon-prev = "<"
+icon-prev-padding = 2
+icon-next-padding = 2
+icon-next = ">"
+
+[module/pwr]
+type	= custom/menu
+
+label-open = " PWR+ "
+label-open-foreground = ${colors.bg}
+label-open-background = ${colors.fg}
+label-close-foreground = ${colors.bg}
+label-close-background = ${colors.rd}
+label-close = " PWR- "
+
+menu-0-0 = " Reboot "
+menu-0-0-exec = menu-open-1
+menu-0-1 = "Shutdown"
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = " Yes "
+menu-1-0-padding = 2
+menu-1-0-exec = reboot
+menu-1-0-foreground = ${colors.gr}
+menu-1-1 = "Cancel "
+menu-1-1-exec = menu-close
+
+menu-2-0 = " Yes "
+menu-2-0-padding = 2
+menu-2-0-exec = poweroff
+menu-2-0-foreground = ${colors.gr}
+menu-2-1 = "Cancel "
+menu-2-1-exec = menu-close
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

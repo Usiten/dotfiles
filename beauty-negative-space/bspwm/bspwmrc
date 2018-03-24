@@ -1,0 +1,15 @@
+#! /bin/sh
+
+sxhkd &
+
+bspc monitor -d A B C D E F
+
+bspc config border_width         2
+bspc config window_gap          16
+
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a "*:floatingterm" state=floating 
+bspc config click_to_focus true
