@@ -1,0 +1,8 @@
+hsetroot -solid '#0D0D0D'
+xsetroot -cursor_name left_ptr
+xrdb merge .Xresources
+compton --config ~/.config/compton/config & 
+setxkbmap gb
+sxhkd &
+polybar top &
+bspwm 
